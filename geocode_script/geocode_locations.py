@@ -33,7 +33,7 @@ def geocode_single_location(address_line):
         return (address_line, "格式错误，应为 '城市, 国家'")
 
     city, country = parts[0], parts[1]
-    query = f"{city}, {country}"
+    query = f"{country}{city}"
     url = "https://nominatim.openstreetmap.org/search"
     params = {'q': query, 'format': 'json', 'limit': 1}
     # 提供一个更具体的 User-Agent 是一个好习惯
