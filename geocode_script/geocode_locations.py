@@ -27,13 +27,14 @@ def geocode_single_location(address_line):
     Geocodes a single address string. This function is designed to be run
     in a separate process.
     """
-    parts = [p.strip() for p in address_line.split(',')]
-    if len(parts) < 2:
-        # 返回一个元组表示失败，以便于主进程记录
-        return (address_line, "格式错误，应为 '城市, 国家'")
+    query = address_line
+    # parts = [p.strip() for p in address_line.split(',')]
+    # if len(parts) < 2:
+    #     # 返回一个元组表示失败，以便于主进程记录
+    #     return (address_line, "格式错误，应为 '城市, 国家'")
 
-    city, country = parts[0], parts[1]
-    query = f"{country}{city}"
+    # city, country = parts[0], parts[1]
+    # query = f"{country}{city}"
     url = "https://nominatim.openstreetmap.org/search"
     params = {'q': query, 'format': 'json', 'limit': 1}
     # 提供一个更具体的 User-Agent 是一个好习惯
@@ -50,8 +51,7 @@ def geocode_single_location(address_line):
 
         if data:
             place_data = {
-                'city': city,
-                'country': country,
+                'city': query,
                 'lat': float(data[0]['lat']),
                 'lon': float(data[0]['lon'])
             }
@@ -97,7 +97,7 @@ def process_locations_in_parallel():
                 failed_places.append(result)
 
     # 对结果进行排序以获得一致的输出，这对于版本控制很有好处
-    successful_places.sort(key=lambda p: (p['country'], p['city']))
+    successful_places.sort(key=lambda p: (p['city']))
 
     # --- 写入文件 ---
     os.makedirs(OUTPUT_DIR, exist_ok=True)
