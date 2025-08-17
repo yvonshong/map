@@ -1,155 +1,196 @@
-中国四川成都
-中国四川德阳
-中国四川自贡
-中国四川宜宾
-中国四川内江
-中国四川资阳
-中国江苏南京
-中国江苏扬州
-中国江苏常州
-中国江苏苏州
-中国江苏无锡
-中国浙江杭州
-中国浙江嘉兴
-中国浙江湖州
-中国浙江绍兴
-中国浙江舟山
-中国浙江宁波
-中国浙江温州
-中国北京
-中国上海
-中国重庆
-中国天津
-中国广东广州
-中国广东深圳
-中国广东清远
-中国广东汕头
-中国广东揭阳
-中国广东珠海
-中国广西南宁
-中国广西北海
-中国广西柳州
-中国江西赣州
-中国江西南昌
-中国江西上饶
-中国湖南长沙
-中国湖北宜昌
-中国福建厦门
-中国福建泉州
-中国福建金门
-中国海南海口
-中国海南省三亚市
-中国安徽合肥
-中国安徽黄山
-中国安徽宣城
-中国安徽滁州
-中国河北张家口
-中国河北唐山
-中国河南郑州
-中国河南洛阳
-中国云南昆明
-中国云南玉溪
-中国内蒙古包头
-中国内蒙古阿拉善盟
-中国内蒙古鄂尔多斯
-中国内蒙古呼伦贝尓海拉尔
-中国内蒙古呼伦贝尓满洲里
-中国内蒙古乌兰察布
-中国辽宁沈阳
-中国宁夏银川
-中国陕西西安
-中国甘肃兰州
-中国甘肃酒泉
-中国甘肃酒泉敦煌
-中国青海西宁
-中国青海海南藏族自治州
-中国西藏拉萨
-中国西藏林芝
-中国西藏山南
-中国澳门
-中国香港
-中国台湾台北
-中国台湾高雄
-中国台湾花莲
-中国台湾屏东县恒春镇
-中国台湾台南
-中国台湾彰化
-中国台湾台中
-中国台湾新竹
-中国台湾基隆
+成都市, 四川省, 中国
+德阳市, 四川省, 中国
+自贡市, 四川省, 中国
+宜宾市, 四川省, 中国
+内江市, 四川省, 中国
+资阳市, 四川省, 中国
 
-日本东京都东京市
-日本冲绳县冲绳市
-日本北海道札幌市
-日本北海道小樽市
-日本北海道占冠村
-日本北海道函馆市
-日本北海道千岁市
-日本福冈县北九州市
-日本福冈县福冈市
-日本福冈县久留米市
-日本佐贺县唐津市
-日本熊本县山鹿市
-日本熊本县阿苏市
-日本熊本县熊本市
-日本爱媛县松山市
-日本爱媛县伊予市
-日本京都府京都市
-日本大阪府大阪市
-日本大阪府茨木市
-日本奈良县奈良市
-日本山梨县南都留郡
-日本神奈川县箱根町
-日本神奈川县小田原市
-日本神奈川县藤泽市
-日本神奈川县镰仓市
-日本神奈川县海老名市
-日本神奈川县厚木市
-日本埼玉县春日部市
-日本茨城县取手市
-日本茨城县水户市
-日本茨城县城里町
-日本千叶县成田市
-日本群马县高崎市
-日本长野县轻井泽町
+南京市, 江苏省, 中国
+扬州市, 江苏省, 中国
+常州市, 江苏省, 中国
+苏州市, 江苏省, 中国
+无锡市, 江苏省, 中国
 
-Vietnam, Ho Chi Minh City
-Vietnam, Da Nang
-Cambodia, Phnom Penh
-Cambodia, Siem Reap
-Thailand, Bangkok
-Thailand, Rayong
-Malaysia, Kuala Lumpur
+杭州市, 浙江省, 中国
+嘉兴市, 浙江省, 中国
+湖州市, 浙江省, 中国
+绍兴市, 浙江省, 中国
+舟山市, 浙江省, 中国
+宁波市, 浙江省, 中国
+温州市, 浙江省, 中国
+
+北京市, 北京市, 中国
+上海市, 上海市, 中国
+重庆市, 重庆市, 中国
+天津市, 天津市, 中国
+
+广州市, 广东省, 中国
+深圳市, 广东省, 中国
+清远市, 广东省, 中国
+汕头市, 广东省, 中国
+揭阳市, 广东省, 中国
+珠海市, 广东省, 中国
+
+南宁市, 广西壮族自治区, 中国
+北海市, 广西壮族自治区, 中国
+柳州市, 广西壮族自治区, 中国
+
+赣州市, 江西省, 中国
+南昌市, 江西省, 中国
+上饶市, 江西省, 中国
+
+长沙市, 湖南省, 中国
+宜昌市, 湖北省, 中国
+
+厦门市, 福建省, 中国
+泉州市, 福建省, 中国
+金门县, 福建省, 中国
+
+海口市, 海南省, 中国
+三亚市, 海南省, 中国
+
+合肥市, 安徽省, 中国
+黄山市, 安徽省, 中国
+宣城市, 安徽省, 中国
+滁州市, 安徽省, 中国
+
+张家口市, 河北省, 中国
+唐山市, 河北省, 中国
+
+郑州市, 河南省, 中国
+洛阳市, 河南省, 中国
+
+昆明市, 云南省, 中国
+玉溪市, 云南省, 中国
+
+包头市, 内蒙古自治区, 中国
+阿拉善盟, 内蒙古自治区, 中国
+鄂尔多斯市, 内蒙古自治区, 中国
+海拉尔区, 内蒙古自治区, 中国
+满洲里市, 内蒙古自治区, 中国
+乌兰察布市, 内蒙古自治区, 中国
+
+沈阳市, 辽宁省, 中国
+
+银川市, 宁夏回族自治区, 中国
+
+西安市, 陕西省, 中国
+
+兰州市, 甘肃省, 中国
+酒泉市, 甘肃省, 中国
+敦煌市, 甘肃省, 中国
+
+西宁市, 青海省, 中国
+海南藏族自治州, 青海省, 中国
+
+
+拉萨市, 西藏自治区, 中国
+林芝市, 西藏自治区, 中国
+山南市, 西藏自治区, 中国
+
+澳门特别行政区, 中国
+香港特别行政区, 中国
+台北, 台湾
+高雄, 台湾
+花莲, 台湾
+屏东县恒春镇, 台湾
+台南, 台湾
+彰化, 台湾
+台中, 台湾
+新竹, 台湾
+基隆, 台湾
+
+東京, 東京都, 日本
+
+沖縄市, 沖縄県, 日本
+
+札幌市, 北海道, 日本
+小樽市, 北海道, 日本
+占冠村, 北海道, 日本
+函館市, 北海道, 日本
+千歳市, 北海道, 日本
+
+北九州市, 福岡県, 日本
+福岡市, 福岡県, 日本
+久留米市, 福岡県, 日本
+
+唐津市, 佐賀県, 日本
+
+山鹿市, 熊本県, 日本
+阿蘇市, 熊本県, 日本
+熊本市, 熊本県, 日本
+
+松山市, 愛媛県, 日本
+伊予市, 愛媛県, 日本
+
+京都市, 京都府, 日本
+
+大阪市, 大阪府, 日本
+茨木市, 大阪府, 日本
+
+奈良市, 奈良県, 日本
+
+南都留郡, 山梨県, 日本
+
+箱根町, 神奈川県, 日本
+小田原市, 神奈川県, 日本
+藤沢市, 神奈川県, 日本
+鎌倉市, 神奈川県, 日本
+海老名市, 神奈川県, 日本
+厚木市, 神奈川県, 日本
+
+春日部市, 埼玉県, 日本
+
+取手市, 茨城県, 日本
+水戸市, 茨城県, 日本
+城里町, 茨城県, 日本
+
+成田市, 千葉県, 日本
+
+高崎市, 群馬県, 日本
+
+軽井沢町, 長野県, 日本
+
+
+
+Ho Chi Minh City, Vietnam
+Da Nang, Vietnam
+Phnom Penh, Cambodia
+Siem Reap, Cambodia
+Bangkok, Thailand
+Rayong, Thailand
+Kuala Lumpur, Malaysia
 Singapore, Singapore
-Indonesia, Batam
-Indonesia, Bintan
+Batam, Indonesia
+Bintan, Indonesia
 
-Italy, Rome
-Italy, Lombardy, Milan
-Italy, Tuscany, Florence
-Vatican City, Vatican City, Vatican City
-Greece, Attica, Athens
-Switzerland, Valais, Täsch
-Switzerland, Valais, Zermatt
-Switzerland, Lucerne, Lucerne
-Switzerland, Zurich, Zurich
-Switzerland, Schaffhausen, Schaffhausen
-Germany, Hesse, Frankfurt
-Germany, Baden-Württemberg, Hechingen
-Germany, Baden-Württemberg, Böblingen
-Germany, Baden-Württemberg, Stuttgart
-Germany, Baden-Württemberg, Heidelberg
-Germany, Bavaria, Munich
-France, Grand Est, Strasbourg
-United Kingdom, England, London
-Norway, Vestland, Bergen
-Norway, Møre og Romsdal, Ålesund
-Norway, Trøndelag, Trondheim
-Norway, Oslo, Oslo
-Norway, Innlandet, Lillehammer
-Sweden, Skåne, Malmö
-Denmark, Capital Region of Denmark, Copenhagen
-United States, Washington, Seattle
-United Arab Emirates, Dubai, Dubai
-United Arab Emirates, Abu Dhabi, Abu Dhabi
-United Arab Emirates, Abu Dhabi, Al Ain
+Rome, Italy
+Milan, Lombardy, Italy
+Florence, Tuscany, Italy
+Vatican City, Vatican City
+
+Athens, Attica, Greece
+Täsch, Valais, Switzerland
+Zermatt, Valais, Switzerland
+Lucerne, Lucerne, Switzerland
+Zurich, Zurich, Switzerland
+Schaffhausen, Schaffhausen, Switzerland
+Frankfurt, Hesse, Germany
+Hechingen, Baden-Württemberg, Germany
+Böblingen, Baden-Württemberg, Germany
+Stuttgart, Baden-Württemberg, Germany
+Heidelberg, Baden-Württemberg, Germany
+Munich, Bavaria, Germany
+Strasbourg, Grand Est, France
+London, England, United Kingdom
+Bergen, Vestland, Norway
+Ålesund, Møre og Romsdal, Norway
+Trondheim, Trøndelag, Norway
+Oslo, Oslo, Norway
+Lillehammer, Innlandet, Norway
+Malmö, Skåne, Sweden
+Copenhagen, Capital Region of Denmark, Denmark
+Seattle, Washington, United States
+Dubai, Dubai, United Arab Emirates
+Abu Dhabi, Abu Dhabi, United Arab Emirates
+Al Ain, Abu Dhabi, United Arab Emirates
