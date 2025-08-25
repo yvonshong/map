@@ -1,5 +1,6 @@
 成都市, 四川省, 中国
 德阳市, 四川省, 中国
+绵阳市, 四川省, 中国
 自贡市, 四川省, 中国
 宜宾市, 四川省, 中国
 内江市, 四川省, 中国
@@ -67,6 +68,7 @@
 阿拉善盟, 内蒙古自治区, 中国
 鄂尔多斯市, 内蒙古自治区, 中国
 海拉尔区, 内蒙古自治区, 中国
+额尔古纳市, 内蒙古自治区, 中国
 满洲里市, 内蒙古自治区, 中国
 乌兰察布市, 内蒙古自治区, 中国
 
@@ -164,7 +166,7 @@ Singapore, Singapore
 Batam, Indonesia
 Bintan, Indonesia
 
-Rome, Italy
+Roma, Italy
 Milan, Lombardy, Italy
 Florence, Tuscany, Italy
 Vatican City, Vatican City
