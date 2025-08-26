@@ -1,0 +1,198 @@
+成都市, 四川省, 中国
+德阳市, 四川省, 中国
+绵阳市, 四川省, 中国
+自贡市, 四川省, 中国
+宜宾市, 四川省, 中国
+内江市, 四川省, 中国
+资阳市, 四川省, 中国
+
+南京市, 江苏省, 中国
+扬州市, 江苏省, 中国
+常州市, 江苏省, 中国
+苏州市, 江苏省, 中国
+无锡市, 江苏省, 中国
+
+杭州市, 浙江省, 中国
+嘉兴市, 浙江省, 中国
+湖州市, 浙江省, 中国
+绍兴市, 浙江省, 中国
+舟山市, 浙江省, 中国
+宁波市, 浙江省, 中国
+温州市, 浙江省, 中国
+
+北京市, 北京市, 中国
+上海市, 上海市, 中国
+重庆市, 重庆市, 中国
+天津市, 天津市, 中国
+
+广州市, 广东省, 中国
+深圳市, 广东省, 中国
+清远市, 广东省, 中国
+汕头市, 广东省, 中国
+揭阳市, 广东省, 中国
+珠海市, 广东省, 中国
+
+南宁市, 广西壮族自治区, 中国
+北海市, 广西壮族自治区, 中国
+柳州市, 广西壮族自治区, 中国
+
+赣州市, 江西省, 中国
+南昌市, 江西省, 中国
+上饶市, 江西省, 中国
+
+长沙市, 湖南省, 中国
+宜昌市, 湖北省, 中国
+
+厦门市, 福建省, 中国
+泉州市, 福建省, 中国
+金门县, 福建省, 中国
+
+海口市, 海南省, 中国
+三亚市, 海南省, 中国
+
+合肥市, 安徽省, 中国
+黄山市, 安徽省, 中国
+宣城市, 安徽省, 中国
+滁州市, 安徽省, 中国
+
+张家口市, 河北省, 中国
+唐山市, 河北省, 中国
+
+郑州市, 河南省, 中国
+洛阳市, 河南省, 中国
+
+昆明市, 云南省, 中国
+玉溪市, 云南省, 中国
+
+包头市, 内蒙古自治区, 中国
+阿拉善盟, 内蒙古自治区, 中国
+鄂尔多斯市, 内蒙古自治区, 中国
+海拉尔区, 内蒙古自治区, 中国
+额尔古纳市, 内蒙古自治区, 中国
+满洲里市, 内蒙古自治区, 中国
+乌兰察布市, 内蒙古自治区, 中国
+
+沈阳市, 辽宁省, 中国
+
+银川市, 宁夏回族自治区, 中国
+
+西安市, 陕西省, 中国
+
+兰州市, 甘肃省, 中国
+酒泉市, 甘肃省, 中国
+敦煌市, 甘肃省, 中国
+
+西宁市, 青海省, 中国
+海南藏族自治州, 青海省, 中国
+
+
+拉萨市, 西藏自治区, 中国
+林芝市, 西藏自治区, 中国
+山南市, 西藏自治区, 中国
+
+澳门特别行政区, 中国
+香港特别行政区, 中国
+台北, 台湾
+高雄, 台湾
+花莲, 台湾
+屏东县恒春镇, 台湾
+台南, 台湾
+彰化, 台湾
+台中, 台湾
+新竹, 台湾
+基隆, 台湾
+
+東京, 東京都, 日本
+
+沖縄市, 沖縄県, 日本
+
+札幌市, 北海道, 日本
+小樽市, 北海道, 日本
+占冠村, 北海道, 日本
+函館市, 北海道, 日本
+千歳市, 北海道, 日本
+
+北九州市, 福岡県, 日本
+福岡市, 福岡県, 日本
+久留米市, 福岡県, 日本
+
+唐津市, 佐賀県, 日本
+
+山鹿市, 熊本県, 日本
+阿蘇市, 熊本県, 日本
+熊本市, 熊本県, 日本
+
+松山市, 愛媛県, 日本
+伊予市, 愛媛県, 日本
+
+京都市, 京都府, 日本
+
+大阪市, 大阪府, 日本
+茨木市, 大阪府, 日本
+
+奈良市, 奈良県, 日本
+
+南都留郡, 山梨県, 日本
+
+箱根町, 神奈川県, 日本
+小田原市, 神奈川県, 日本
+藤沢市, 神奈川県, 日本
+鎌倉市, 神奈川県, 日本
+海老名市, 神奈川県, 日本
+厚木市, 神奈川県, 日本
+
+春日部市, 埼玉県, 日本
+
+取手市, 茨城県, 日本
+水戸市, 茨城県, 日本
+城里町, 茨城県, 日本
+
+成田市, 千葉県, 日本
+
+高崎市, 群馬県, 日本
+
+軽井沢町, 長野県, 日本
+
+
+
+Ho Chi Minh City, Vietnam
+Da Nang, Vietnam
+Phnom Penh, Cambodia
+Siem Reap, Cambodia
+Bangkok, Thailand
+Rayong, Thailand
+Kuala Lumpur, Malaysia
+Singapore, Singapore
+Batam, Indonesia
+Bintan, Indonesia
+
+Roma, Italy
+Milan, Lombardy, Italy
+Florence, Tuscany, Italy
+Vatican City, Vatican City
+
+Athens, Attica, Greece
+Täsch, Valais, Switzerland
+Zermatt, Valais, Switzerland
+Lucerne, Lucerne, Switzerland
+Zurich, Zurich, Switzerland
+Schaffhausen, Schaffhausen, Switzerland
+Frankfurt, Hesse, Germany
+Hechingen, Baden-Württemberg, Germany
+Böblingen, Baden-Württemberg, Germany
+Stuttgart, Baden-Württemberg, Germany
+Heidelberg, Baden-Württemberg, Germany
+Munich, Bavaria, Germany
+Strasbourg, Grand Est, France
+London, England, United Kingdom
+Bergen, Vestland, Norway
+Ålesund, Møre og Romsdal, Norway
+Trondheim, Trøndelag, Norway
+Oslo, Oslo, Norway
+Lillehammer, Innlandet, Norway
+Malmö, Skåne, Sweden
+Copenhagen, Capital Region of Denmark, Denmark
+Seattle, Washington, United States
+Dubai, Dubai, United Arab Emirates
+Abu Dhabi, Abu Dhabi, United Arab Emirates
+Al Ain, Abu Dhabi, United Arab Emirates
