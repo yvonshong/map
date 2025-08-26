@@ -33,6 +33,7 @@ jobs:
           if [ -f geocode_script/requirements.txt ]; then
             pip install -r geocode_script/requirements.txt
           fi
+          pip3 install requests
 
       # 第四步：运行 Python 脚本以生成文件
       # 假设脚本会在 geocode_script 目录下生成网站文件
