@@ -94,8 +94,8 @@ const myPlaces = [
   },
   {
     "city": "London, England, United Kingdom",
-    "lat": 51.5074456,
-    "lon": -0.1277653
+    "lat": 51.4893335,
+    "lon": -0.1440551
   },
   {
     "city": "Lucerne, Lucerne, Switzerland",
@@ -126,6 +126,11 @@ const myPlaces = [
     "city": "Phnom Penh, Cambodia",
     "lat": 11.5730391,
     "lon": 104.857807
+  },
+  {
+    "city": "Portland, Oregon, United States",
+    "lat": 45.5202471,
+    "lon": -122.674194
   },
   {
     "city": "Rayong, Thailand",
@@ -349,8 +354,8 @@ const myPlaces = [
   },
   {
     "city": "台南, 台湾",
-    "lat": 22.9971954,
-    "lon": 120.2130772
+    "lat": 22.9972341,
+    "lon": 120.2129923
   },
   {
     "city": "合肥市, 安徽省, 中国",
@@ -834,8 +839,8 @@ const myPlaces = [
   },
   {
     "city": "高雄, 台湾",
-    "lat": 22.6395321,
-    "lon": 120.3025585
+    "lat": 22.639838,
+    "lon": 120.3025796
   },
   {
     "city": "黄山市, 安徽省, 中国",
