@@ -206,7 +206,10 @@ Oslo, Oslo, Norway
 Lillehammer, Innlandet, Norway
 Malmö, Skåne, Sweden
 Copenhagen, Capital Region of Denmark, Denmark
+
 Seattle, Washington, United States
+Portland, Oregon, United States
+
 Dubai, Dubai, United Arab Emirates
 Abu Dhabi, Abu Dhabi, United Arab Emirates
 Al Ain, Abu Dhabi, United Arab Emirates
