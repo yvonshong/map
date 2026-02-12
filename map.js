@@ -36,7 +36,7 @@ myPlaces.forEach(place => {
 
         // 添加 Entity
         viewer.entities.add({
-            name: `${place.city}, ${place.country}`,
+            name: place.city, // 使用完整的地名 (locations.js 中的 city 字段包含国家省份城市)
             position: position,
             point: {
                 pixelSize: 10,
@@ -44,25 +44,45 @@ myPlaces.forEach(place => {
                 outlineColor: Cesium.Color.WHITE,
                 outlineWidth: 2
             },
-            // 如果想要用 billboard (图片图标) 可以解开下面注释并替换 iconUrl
-            /*
-            billboard: {
-                image: 'pin.png', // 确保 pin.png 路径正确
-                width: 32,
-                height: 32,
-                verticalOrigin: Cesium.VerticalOrigin.BOTTOM
+            label: {
+                text: place.city, // 显示完整的地名
+                show: false,      // 默认隐藏，点击后显示
+                font: '14px sans-serif',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                fillColor: Cesium.Color.WHITE,
+                outlineColor: Cesium.Color.BLACK,
+                outlineWidth: 2,
+                horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
+                pixelOffset: new Cesium.Cartesian2(15, 0), // 向右偏移，避免遮挡点
+                scaleByDistance: new Cesium.NearFarScalar(1.5e2, 1.0, 1.5e7, 0.5) // 远距离缩小
             },
-            */
             description: `
                 <div style="padding: 10px;">
-                    <h3>${place.city}, ${place.country}</h3>
+                    <h3>${place.city}</h3>
                     <p>${description}</p>
                     <p>Lat: ${place.lat}, Lon: ${place.lon}</p>
                 </div>
             `
         });
     } else {
-        console.warn(`地点 ${place.city}, ${place.country} 缺少坐标信息，已跳过。`);
+        console.warn(`地点 ${place.city} 缺少坐标信息，已跳过。`);
+    }
+});
+
+// 5. 监听选中实体改变事件，实现"点击显示标签"
+let prevSelectedEntity = null;
+viewer.selectedEntityChanged.addEventListener(function (selectedEntity) {
+    // 隐藏上一个选中的实体的标签
+    if (Cesium.defined(prevSelectedEntity) && Cesium.defined(prevSelectedEntity.label)) {
+        prevSelectedEntity.label.show = false;
+    }
+
+    // 显示当前选中的实体的标签
+    if (Cesium.defined(selectedEntity) && Cesium.defined(selectedEntity.label)) {
+        selectedEntity.label.show = true;
+        prevSelectedEntity = selectedEntity;
+    } else {
+        prevSelectedEntity = null;
     }
 });
 
