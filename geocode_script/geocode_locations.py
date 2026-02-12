@@ -149,6 +149,13 @@ def process_locations_in_parallel():
     # 对结果进行排序以获得一致的输出
     final_results.sort(key=lambda p: (p['city']))
 
+    # 3. 统一命名原则：将 "台湾" 标记为 "台湾省, 中国"
+    for p in final_results:
+        if "台湾" in p['city'] and "中国" not in p['city']:
+             p['city'] = p['city'].replace("台湾", "台湾省, 中国")
+        elif "Taiwan" in p['city'] and "China" not in p['city']:
+             p['city'] = p['city'].replace("Taiwan", "Taiwan Province, China")
+
     # --- 写入文件 ---
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     json_string = json.dumps(final_results, indent=2, ensure_ascii=False)

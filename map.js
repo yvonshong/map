@@ -55,8 +55,11 @@ myPlaces.forEach(place => {
                 fillColor: Cesium.Color.WHITE,
                 outlineColor: Cesium.Color.BLACK,
                 outlineWidth: 2,
-                horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
-                pixelOffset: new Cesium.Cartesian2(15, 0), // 向右偏移，避免遮挡点
+                horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+                verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                pixelOffset: new Cesium.Cartesian2(0, -15), // 向上偏移，显示在点上方
+                showBackground: true,
+                backgroundColor: new Cesium.Color(0, 0, 0, 0.7), // 背景不透明度
                 scaleByDistance: new Cesium.NearFarScalar(1.5e2, 1.0, 1.5e7, 0.5) // 远距离缩小
             },
             description: `
@@ -274,6 +277,37 @@ handler.setInputAction(function (movement) {
     dynamicLabelEntity.label.show = false;
 
 }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+
+// 8. 加载国界线 (GeoJSON) - 使用符合“一个中国”原则的合并数据
+const countrySource = new Cesium.GeoJsonDataSource();
+const promise = countrySource.load('data/world_borders_compliant.json', {
+    stroke: Cesium.Color.CYAN.withAlpha(0.3), // 默认样式尝试
+    fill: Cesium.Color.TRANSPARENT,
+    strokeWidth: 2,
+});
+
+promise.then(function (dataSource) {
+    viewer.dataSources.add(dataSource);
+    const entities = dataSource.entities.values;
+
+    for (let i = 0; i < entities.length; i++) {
+        const entity = entities[i];
+
+        // 通常 GeoJSON 里的国家是 Polygon
+        if (Cesium.defined(entity.polygon)) {
+            entity.polygon.material = Cesium.Color.TRANSPARENT; // 内部透明
+            entity.polygon.outline = true;
+            entity.polygon.outlineColor = Cesium.Color.CYAN.withAlpha(0.3); // 青色边框
+            entity.polygon.outlineWidth = 2;
+
+            // 贴地设置 (重要!)
+            // Cesium 中 Polygon 贴地需要设置 height 为 undefined 或 0 (默认) 并开启 arcType?
+            // 其实 Cesium 默认 Polygon 是贴地的 (ClassificationType.TERRAIN) 如果没有 height
+        }
+    }
+}).catch(function (error) {
+    console.error("Failed to load country borders:", error);
+});
 
 // 7. 添加 UI 开关
 // 创建一个简单的 HTML 按钮覆盖在地图上
