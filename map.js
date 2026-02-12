@@ -194,14 +194,8 @@ if (typeof myFlights !== 'undefined') {
 
         const positions = getCurvedLine(start, end, curvature);
 
-        // 计算中点位置用于放置标签
-        const midIndex = Math.floor(positions.length / 2);
-        const midPosition = positions[midIndex];
-
         const flightEntity = viewer.entities.add({
             name: `Flight ${flight.flight_no}`,
-            // 实体位置设为曲线中点，供 Label 使用
-            position: midPosition,
             polyline: {
                 positions: positions,
                 width: 2,
@@ -210,17 +204,9 @@ if (typeof myFlights !== 'undefined') {
                     color: Cesium.Color.GOLD
                 }),
             },
-            label: {
-                text: `${flight.date}\n${flight.flight_no}\n${flight.dep_city} -> ${flight.arr_city}`,
-                show: false, // 默认隐藏，点击后显示
-                font: '12px sans-serif',
-                showBackground: true,
-                backgroundColor: new Cesium.Color(0, 0, 0, 0.7),
-                style: Cesium.LabelStyle.FILL,
-                fillColor: Cesium.Color.WHITE,
-                verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                pixelOffset: new Cesium.Cartesian2(0, -10),
-                disableDepthTestDistance: Number.POSITIVE_INFINITY // 确保标签不被地球遮挡
+            // 将航班信息存储在自定义属性中，供点击事件使用
+            properties: {
+                infoText: `${flight.date}\n${flight.flight_no}\n${flight.dep_city} -> ${flight.arr_city}`
             },
             // 自定义属性，用于弹窗 (虽然我们禁用了 infoBox，保留此数据是个好习惯)
             description: `
@@ -238,6 +224,56 @@ if (typeof myFlights !== 'undefined') {
         flightEntities.push(flightEntity);
     });
 }
+
+// 7. 动态标签 (点击轨迹时显示在点击位置)
+const dynamicLabelEntity = viewer.entities.add({
+    label: {
+        show: false,
+        showBackground: true,
+        font: '12px sans-serif',
+        horizontalOrigin: Cesium.HorizontalOrigin.LEFT,
+        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+        pixelOffset: new Cesium.Cartesian2(10, -10),
+        backgroundColor: new Cesium.Color(0, 0, 0, 0.7),
+        style: Cesium.LabelStyle.FILL,
+        fillColor: Cesium.Color.WHITE,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
+    }
+});
+
+// 处理点击事件
+const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+handler.setInputAction(function (movement) {
+    const pickedObject = viewer.scene.pick(movement.position);
+
+    // 如果点击了实体，并且该实体有我们存的 flight infoText
+    if (Cesium.defined(pickedObject) &&
+        Cesium.defined(pickedObject.id) &&
+        Cesium.defined(pickedObject.id.properties) &&
+        pickedObject.id.properties.hasProperty('infoText')) {
+
+        // 获取点击在地球表面的位置
+        // viewer.scene.pickPosition 适用于模型和地形，但在某些 2D 视图或无地形时可能不稳定
+        // 对于 Polyline，我们可以尝试用 ray intersection 或者简单的 camera pickEllipsoid
+        let cartesian = viewer.scene.pickPosition(movement.position);
+
+        if (!Cesium.defined(cartesian)) {
+            const ray = viewer.camera.getPickRay(movement.position);
+            cartesian = viewer.scene.globe.pick(ray, viewer.scene);
+        }
+
+        if (Cesium.defined(cartesian)) {
+            dynamicLabelEntity.position = cartesian;
+            dynamicLabelEntity.label.text = pickedObject.id.properties.infoText.getValue();
+            dynamicLabelEntity.label.show = true;
+            return;
+        }
+    }
+
+    // 如果没点到航班轨迹，或者点到了空处，隐藏标签
+    dynamicLabelEntity.label.show = false;
+
+}, Cesium.ScreenSpaceEventType.LEFT_CLICK);
 
 // 7. 添加 UI 开关
 // 创建一个简单的 HTML 按钮覆盖在地图上
