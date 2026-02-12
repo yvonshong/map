@@ -24,7 +24,7 @@ const viewer = new Cesium.Viewer('map', {
 // 禁用双击实体时的自动追踪/缩放
 viewer.cesiumWidget.screenSpaceEventHandler.removeInputAction(Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK);
 
-viewer.scene.globe.enableLighting = true; // 开启光照，更有立体感
+viewer.scene.globe.enableLighting = false; // 关闭光照，提高性能且让地图更清晰
 
 // 2. 遍历已经包含坐标的地点，并在地图上添加 Entity (Pin)
 myPlaces.forEach(place => {
@@ -92,20 +92,21 @@ viewer.selectedEntityChanged.addEventListener(function (selectedEntity) {
     }
 });
 
-// 3. 设置地图中心在上海
+viewer.scene.globe.enableLighting = false; // 关闭光照，提高性能且让地图更清晰
+
+// 3. 设置地图中心在上海 (直接跳转，无需飞行动画，加速加载体验)
 // 上海坐标: 31.2304° N, 121.4737° E
 const shanghaiLon = 121.4691024;
 const shanghaiLat = 31.2323437;
-const shanghaiHeight = 10000000; // 视点高度，单位米，调整这个值来决定初始缩放级别
+const shanghaiHeight = 10000000; // 视点高度
 
-viewer.camera.flyTo({
+viewer.camera.setView({
     destination: Cesium.Cartesian3.fromDegrees(shanghaiLon, shanghaiLat, shanghaiHeight),
     orientation: {
         heading: Cesium.Math.toRadians(0.0), // 北向
         pitch: Cesium.Math.toRadians(-90.0), // 俯视
         roll: 0.0
-    },
-    duration: 3 // 飞行持续时间 3秒
+    }
 });
 
 // 6. 航班轨迹功能
