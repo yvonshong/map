@@ -30,17 +30,23 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f geocode_script/requirements.txt ]; then
-            pip install -r geocode_script/requirements.txt
-          fi
-          pip3 install requests
-          pip3 install tqdm
+          pip3 install requests tqdm pandas openpyxl
 
       # 第四步：运行 Python 脚本以生成文件
-      # 假设脚本会在 geocode_script 目录下生成网站文件
       - name: Run Python script to generate files
-        working-directory: ./geocode_script
-        run: python3 geocode_locations.py
+        run: |
+          python3 geocode_script/geocode_locations.py
+          python3 geocode_script/parse_flights.py
+
+      # 第五步：将生成的文件部署到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # GITHUB_TOKEN 是由 GitHub Actions 自动创建的，用于授权
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 要发布到 gh-pages 分支的目录
+          # 发布根目录，包含 index.html, map.js, data/, style.css 等
+          publish_dir: ./
 
       # 第五步：将生成的文件部署到 gh-pages 分支
       - name: Deploy to GitHub Pages
