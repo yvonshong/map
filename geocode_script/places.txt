@@ -119,6 +119,10 @@
 
 
 沖縄市, 沖縄県, 日本
+今帰仁村, 冲绳县国头郡, 日本
+本部町, 冲绳县国头郡, 日本
+
+
 
 札幌市, 北海道, 日本
 小樽市, 北海道, 日本
@@ -173,10 +177,14 @@
 成田市, 千葉県, 日本
 
 高崎市, 群馬県, 日本
+伊势崎市, 群馬県, 日本
+
 
 軽井沢町, 長野県, 日本
 塩尻市, 長野県, 日本
 諏訪市, 長野県, 日本
+冈谷市, 長野県, 日本
+茅野市, 長野県, 日本
 
 
 Ho Chi Minh City, Vietnam
@@ -186,6 +194,7 @@ Siem Reap, Cambodia
 Bangkok, Thailand
 Rayong, Thailand
 Kuala Lumpur, Malaysia
+Johor Bahru, Malaysia
 Singapore, Singapore
 Batam, Indonesia
 Bintan, Indonesia
