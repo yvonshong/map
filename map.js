@@ -24,6 +24,10 @@ const viewer = new Cesium.Viewer('map', {
 // 禁用双击实体时的自动追踪/缩放
 viewer.cesiumWidget.screenSpaceEventHandler.removeInputAction(Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK);
 
+// 约束相机旋转：锁定 Z 轴（永远朝向正北）
+viewer.scene.screenSpaceCameraController.enableRoll = false; // 禁用翻滚
+viewer.scene.screenSpaceCameraController.enableTilt = false; // 禁用俯仰（如果需要锁定为俯视视角）
+
 viewer.scene.globe.enableLighting = false; // 关闭光照，提高性能且让地图更清晰
 
 // 2. 遍历已经包含坐标的地点，并在地图上添加 Entity (Pin)
@@ -144,8 +148,13 @@ function getCurvedLine(startPoint, endPoint, curvature) {
     // 侧向偏移距离
     const lateralOffset = distance * curvature;
 
-    // 控制点 = 中点 + 高度偏移 + 侧向偏移
-    const controlPoint = Cesium.Cartesian3.clone(midPoint);
+    // 为了防止穿过地球表面，控制点应该基于地表，而不是两点的中点（两点的直线中点在地下）
+    // 假设起点和终点都在地表（通过它们到地心的距离估算半径）
+    const radius = Cesium.Cartesian3.magnitude(startPoint);
+    const surfacePoint = Cesium.Cartesian3.multiplyByScalar(midPointNormal, radius, new Cesium.Cartesian3());
+
+    // 控制点 = 地表中点 + 高度偏移 + 侧向偏移
+    const controlPoint = Cesium.Cartesian3.clone(surfacePoint);
 
     // 添加高度
     const heightVector = Cesium.Cartesian3.multiplyByScalar(midPointNormal, heightOffset, new Cesium.Cartesian3());
@@ -226,6 +235,31 @@ if (typeof myFlights !== 'undefined') {
         // 默认隐藏
         flightEntity.show = false;
         flightEntities.push(flightEntity);
+
+        // 添加起点和终点的圆点
+        const startDot = viewer.entities.add({
+            position: start,
+            point: {
+                pixelSize: 6,
+                color: Cesium.Color.GOLD,
+                outlineColor: Cesium.Color.WHITE,
+                outlineWidth: 1
+            },
+            show: false
+        });
+        flightEntities.push(startDot);
+
+        const endDot = viewer.entities.add({
+            position: end,
+            point: {
+                pixelSize: 6,
+                color: Cesium.Color.GOLD,
+                outlineColor: Cesium.Color.WHITE,
+                outlineWidth: 1
+            },
+            show: false
+        });
+        flightEntities.push(endDot);
     });
 }
 
