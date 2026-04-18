@@ -8,8 +8,8 @@ const myFlights = [
     "dep_time": "09:30",
     "arr_city": "东京成田",
     "arr_time": "10:55",
-    "from_lat": 35.5175308,
-    "from_lon": 137.8392394,
+    "from_lat": 34.2148838,
+    "from_lon": 134.0147201,
     "to_lat": 35.7697859,
     "to_lon": 140.3772663
   },
@@ -62,8 +62,8 @@ const myFlights = [
     "arr_time": "12:30",
     "from_lat": 35.5456924,
     "from_lon": 139.7760994,
-    "to_lat": 35.5175308,
-    "to_lon": 137.8392394
+    "to_lat": 34.2148838,
+    "to_lon": 134.0147201
   },
   {
     "date": "2026年4月12日",
@@ -75,8 +75,8 @@ const myFlights = [
     "arr_time": "14:25",
     "from_lat": 35.5456924,
     "from_lon": 139.7760994,
-    "to_lat": 35.5175308,
-    "to_lon": 137.8392394
+    "to_lat": 34.2148838,
+    "to_lon": 134.0147201
   },
   {
     "date": "2026年3月9日",
