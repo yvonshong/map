@@ -36,7 +36,7 @@ jobs:
       - name: Run Python script to generate files
         run: |
           python3 geocode_script/geocode_locations.py
-          python3 geocode_script/parse_flights.py
+          # python3 geocode_script/parse_flights.py
 
       # 第五步：将生成的文件部署到 gh-pages 分支
       - name: Deploy to GitHub Pages
