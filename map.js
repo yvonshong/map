@@ -344,6 +344,56 @@ promise.then(function (dataSource) {
     console.error("Failed to load country borders:", error);
 });
 
+// 9. 加载中国省界
+const chinaSource = new Cesium.GeoJsonDataSource();
+const chinaPromise = chinaSource.load('data/china_compliant.json', {
+    stroke: Cesium.Color.LIGHTGRAY.withAlpha(0.5),
+    fill: Cesium.Color.TRANSPARENT,
+    strokeWidth: 1,
+});
+
+chinaPromise.then(function (dataSource) {
+    viewer.dataSources.add(dataSource);
+    const entities = dataSource.entities.values;
+
+    for (let i = 0; i < entities.length; i++) {
+        const entity = entities[i];
+        if (Cesium.defined(entity.polygon)) {
+            entity.polygon.material = Cesium.Color.TRANSPARENT;
+            entity.polygon.outline = true;
+            entity.polygon.outlineColor = Cesium.Color.LIGHTGRAY.withAlpha(0.5);
+            entity.polygon.outlineWidth = 1;
+        }
+    }
+}).catch(function (error) {
+    console.error("Failed to load China borders:", error);
+});
+
+// 10. 加载日本县界
+const japanSource = new Cesium.GeoJsonDataSource();
+const japanPromise = japanSource.load('data/japan.geojson', {
+    stroke: Cesium.Color.LIGHTGRAY.withAlpha(0.5),
+    fill: Cesium.Color.TRANSPARENT,
+    strokeWidth: 1,
+});
+
+japanPromise.then(function (dataSource) {
+    viewer.dataSources.add(dataSource);
+    const entities = dataSource.entities.values;
+
+    for (let i = 0; i < entities.length; i++) {
+        const entity = entities[i];
+        if (Cesium.defined(entity.polygon)) {
+            entity.polygon.material = Cesium.Color.TRANSPARENT;
+            entity.polygon.outline = true;
+            entity.polygon.outlineColor = Cesium.Color.LIGHTGRAY.withAlpha(0.5);
+            entity.polygon.outlineWidth = 1;
+        }
+    }
+}).catch(function (error) {
+    console.error("Failed to load Japan borders:", error);
+});
+
 // 7. 添加 UI 开关
 // 创建一个简单的 HTML 按钮覆盖在地图上
 const toolbar = document.createElement('div');
